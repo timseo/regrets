@@ -10,11 +10,13 @@ class DrinksController < ApplicationController
   # GET /drinks.json
   def index
     @drinks = Drink.all
+    @drinks.name.capitalize!
   end
 
   # GET /drinks/1
   # GET /drinks/1.json
   def show
+    @drink.name.capitalize!
   end
 
   # GET /drinks/new
@@ -30,11 +32,13 @@ class DrinksController < ApplicationController
   # POST /drinks.json
   def create
     @drink = Drink.new(drink_params)
+    @drink.name.downcase!
 
     respond_to do |format|
       if @drink.save
         format.html { redirect_to @drink, notice: 'Drink was successfully created.' }
         format.json { render :show, status: :created, location: @drink }
+
       else
         format.html { render :new }
         format.json { render json: @drink.errors, status: :unprocessable_entity }
@@ -70,6 +74,7 @@ class DrinksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_drink
       @drink = Drink.find(params[:id])
+      @drink.name.capitalize!
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

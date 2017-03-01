@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Regret</title>
+    <title>regrets</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <%= render 'partials/nav' %>
     <% if current_user %>
       <!-- current_user will return true if a user is logged in -->
       <%= "Logged in as #{current_user.email}" %> | <%= link_to 'Home', root_path %> | <%= link_to 'Log Out', logout_path, method: :delete %>
@@ -25,6 +26,8 @@
     <% if alert %>
       <%= alert %>
     <% end %>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

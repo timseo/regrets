@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 # hides dev environment
-gem 'dotenv-rails', group: :development
+gem 'dotenv-rails', group: :development, require: 'dotenv/rails-now'
 # photo upload
 gem 'paperclip'
 gem 'aws-sdk'
@@ -17,6 +17,10 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+# bootstrap sass
+gem 'bootstrap-sass', '~> 3.3.6'
+# bootswatch
+gem 'bootswatch-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

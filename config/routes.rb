@@ -19,10 +19,18 @@ Rails.application.routes.draw do
     get '/login'     => 'sessions#new'
     # create (post) action for when log in form is submitted:
     post '/login'    => 'sessions#create'
-
     # delete action to log out:
     delete '/logout' => 'sessions#destroy'
-    
     get 'pages/secret'
+
+    # drinks load page
+
+    # get 'drinks/' => 'drinks#index'
+    # post 'drinks/' => 'drinks#create'
+    # get 'drinks/new' => 'drinks#new', as: :new_drink
+    # get 'drinks/:id' => 'drinks#show', as: :drink
+    # get 'drinks/:id/edit' => 'drinks#edit', as: :edit_drink
+    # patch 'drinks/:id' => 'drinks#update'
+    # delete 'drinks/:id' => 'drinks#destroy'
 
 end
