@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170301020049) do
+ActiveRecord::Schema.define(version: 20170301202728) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,9 +27,12 @@ ActiveRecord::Schema.define(version: 20170301020049) do
 
   create_table "drinks", force: :cascade do |t|
     t.string   "name"
-    t.string   "drink_logo"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.string   "drink_logo_file_name"
+    t.string   "drink_logo_content_type"
+    t.integer  "drink_logo_file_size"
+    t.datetime "drink_logo_updated_at"
   end
 
   create_table "posts", force: :cascade do |t|
