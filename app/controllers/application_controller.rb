@@ -9,4 +9,10 @@ class ApplicationController < ActionController::Base
     # Look up the current user based on user_id in the session cookie:
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
+
+  def authorize
+    redirect_to login_path, alert: 'Please Login' if current_user.nil?
+  end
+
+
 end
