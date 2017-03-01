@@ -1,5 +1,10 @@
 class DrinksController < ApplicationController
   before_action :set_drink, only: [:show, :edit, :update, :destroy]
+  # before_save :downcase_fields  <----- come back n
+  #
+  # def downcase_fields
+  #     self.name.downcase!
+  #  end
 
   # GET /drinks
   # GET /drinks.json
