@@ -18,12 +18,19 @@ Ever wonder how much you had to drink last night?  **reGrets**, is here to help 
 ## Approach Taken
 Started by sketching out wireframes.  ERD to visualize data flow and table management. 
 ## Install 411
-Click here ____ and clone my git repo.  Once cloned, open project via text editor in command line and initialize rails server.  Open browser and point to server address given in terminal.  Enjoy!
+Click here [github ](https://github.com/timseo/regrets "App Link") and clone my git repo.  Once cloned, open project via text editor in command line and initialize rails server.  Open browser and point to server address given in terminal.  Enjoy!
+
+## Stretch Goals
+* Speech recognition
+* Allow user to click on drink image to add to count
+* facebook login
+* Filter post board by popularity 
+
 ## Unsolved
 Stay tuned
 
 ## Links
-###[Tab Tracker](https://timseo.github.io/GA_project2/ "App Link")
+###[REGRETS - github](https://github.com/timseo/regrets "App Link")
 ###[Trello](https://trello.com/b/PWvBrNRF "trello")
 
 ![moski logo](https://github.com/timseo/GA_project1/blob/master/images/moski-greyscale-logo.png?raw=true=10x10)
