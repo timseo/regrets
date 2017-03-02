@@ -1,7 +1,7 @@
 class Drink < ApplicationRecord
     has_many :post
     has_attached_file :drink_logo,
-            styles: { medium: "500x500#", thumb: "100x100#"},
+            styles: { medium: "300x300#", thumb: "100x100#"},
             storage: :s3,
             url: ":s3_domain_url",
             path: "/:class/:attachment/:id_partition/:style/:filename",

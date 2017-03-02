@@ -7,7 +7,7 @@
 
 <p>
   <strong>Drink logo:</strong>
-  <%= @drink.drink_logo %>
+  <%= image_tag @drink.drink_logo.url(:medium), class: "thumbnail" %>
 </p>
 
 <%= link_to 'Edit', edit_drink_path(@drink) %> |
