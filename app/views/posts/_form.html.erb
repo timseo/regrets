@@ -17,8 +17,8 @@
   </div> -->
 
   <div class="field">
-    <% drinks = Drink.all.map { |d| [d.name, d.id]} %>
-    <%= f.select :drink_id, drinks %>
+    <!-- <%# drinks = Drink.all.map { |d| [d.name, d.id]} %> -->
+    <%= f.collection_select :drink_id, Drink.all, :id, :name, prompt: true %>
   </div>
 
   <div class="field">

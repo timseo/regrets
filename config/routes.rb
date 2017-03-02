@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :comments
   resources :posts
-  resources :drinks
+  # resources :drinks
   # resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # Add a root route if you don't have one...
@@ -25,12 +25,12 @@ Rails.application.routes.draw do
 
     # drinks load page
 
-    # get 'drinks/' => 'drinks#index'
-    # post 'drinks/' => 'drinks#create'
-    # get 'drinks/new' => 'drinks#new', as: :new_drink
-    # get 'drinks/:id' => 'drinks#show', as: :drink
-    # get 'drinks/:id/edit' => 'drinks#edit', as: :edit_drink
-    # patch 'drinks/:id' => 'drinks#update'
-    # delete 'drinks/:id' => 'drinks#destroy'
+    get 'drinks/' => 'drinks#index'
+    post 'drinks/' => 'drinks#create'
+    get 'drinks/new' => 'drinks#new', as: :new_drink
+    get 'drinks/:id' => 'drinks#show', as: :drink
+    get 'drinks/:id/edit' => 'drinks#edit', as: :edit_drink
+    patch 'drinks/:id' => 'drinks#update'
+    delete 'drinks/:id' => 'drinks#destroy'
 
 end
