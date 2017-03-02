@@ -2,8 +2,23 @@
   <h1><img src= "https://github.com/timseo/regrets/blob/master/image/regrets-logo-black.png?raw=true" alt= "regrets" class= "img_responsive" ></h1>
   <p>Ever have a great night out and wonder the morning after what exactly was the perfect mix of libations that created such a magical evening out?  Regrets provides a place for you to keep track and share your tab.</p>
   <p>
-    <a href= "/" class="btn btn-primary btn-lg">Sign up</a>
-    <a href= "/posts" class="btn btn-primary btn-lg" >Recent Regrets</a>
+    <a>
+      <% if current_user %>
+        <!-- current_user will return true if a user is logged in -->
+        <%= "Hello #{current_user.name}" %>
+        <hr>
+        <a href= "/posts" class="btn btn-primary btn-lg" >Recent Regrets</a>
+
+        <!-- not logged in -->
+      <% else %>
+        <a href= "/" class="btn btn-primary btn-lg">Sign up</a>
+      
+      <% end %>
+    </a>
+
+
+
+
   </p>
 
 </div>

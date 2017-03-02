@@ -63,7 +63,7 @@ class DrinksController < ApplicationController
   # DELETE /drinks/1
   # DELETE /drinks/1.json
   def destroy
-    @drink.destroy
+    @drink.destroy(drink_params)
     respond_to do |format|
       format.html { redirect_to drinks_url, notice: 'Drink was successfully destroyed.' }
       format.json { head :no_content }
