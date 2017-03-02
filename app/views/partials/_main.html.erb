@@ -6,13 +6,13 @@
       <% if current_user %>
         <!-- current_user will return true if a user is logged in -->
         <%= "Hello #{current_user.name}" %>
-        <hr>
+      <br>
         <a href= "/posts" class="btn btn-primary btn-lg" >Recent Regrets</a>
 
         <!-- not logged in -->
       <% else %>
         <a href= "/" class="btn btn-primary btn-lg">Sign up</a>
-      
+
       <% end %>
     </a>
 

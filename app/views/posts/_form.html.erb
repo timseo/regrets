@@ -16,17 +16,20 @@
     <%# f.text_field :user_id %>
   </div> -->
 
-  <div class="field">
-    <!-- <%# drinks = Drink.all.map { |d| [d.name, d.id]} %> -->
-    <%= f.collection_select :drink_id, Drink.all.order(:name), :id, :name, prompt: true %>
-  </div>
+    <div class="field">
+      <%= f.label :drink %>
+    <br>
+      <!-- <%# drinks = Drink.all.map { |d| [d.name, d.id]} %> -->
+      <%= f.collection_select :drink_id, Drink.all.order(:name), :id, :name, prompt: true %>
+    </div>
 
-  <div class="field">
-    <%= f.label :quantity %>
-    <%= f.number_field :quantity %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :quantity %>
+  <br>
+      <%= f.number_field :quantity %>
+    </div>
+  <br>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>
