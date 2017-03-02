@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user
-  belongs_to :post_drink
+  has_many :orders
+  has_many :drinks, through: :orders
   has_many :comments
   # has_attached_file :drink_logo, :styles => { :medium => "300x300#", :thumb => "100x100#" }
   #

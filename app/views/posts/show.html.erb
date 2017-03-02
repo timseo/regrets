@@ -1,18 +1,15 @@
 <p id="notice"><%= notice %></p>
-
+<h1><%= @post.title %></h1>
 <p>
   <strong>User:</strong>
-  <%= @post.user %>
+  <%= @post.user.name %>
 </p>
 
 <p>
-  <strong>Drink:</strong>
-  <%= @post.drinks %>
-</p>
-
-<p>
-  <strong>Quantity:</strong>
-  <%= @post.quantity %>
+  <strong>Orders:</strong>
+  <% @post.orders.each do |o| %>
+    <li><%= o.drink.name %> | <%= o.quantity %>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

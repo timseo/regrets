@@ -29,9 +29,10 @@ class PostsController < ApplicationController
     # @post.drink_id = @drink
 
 
+
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.html { redirect_to edit_post_path(@post), notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }
@@ -70,8 +71,8 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Never trust parameters from the scary internet, only allosw the white list through.
     def post_params
-      params.require(:post).permit(:user_id, :drink_id, :quantity)
+      params.require(:post).permit(:title)
     end
 end
