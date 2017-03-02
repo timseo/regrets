@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170301202728) do
+ActiveRecord::Schema.define(version: 20170302011946) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(version: 20170301202728) do
     t.datetime "drink_logo_updated_at"
   end
 
+  create_table "post_drinks", force: :cascade do |t|
+    t.integer  "post_id"
+    t.integer  "drink_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["drink_id"], name: "index_post_drinks_on_drink_id", using: :btree
+    t.index ["post_id"], name: "index_post_drinks_on_post_id", using: :btree
+  end
+
   create_table "posts", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "drink_id"
@@ -55,6 +64,8 @@ ActiveRecord::Schema.define(version: 20170301202728) do
 
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
+  add_foreign_key "post_drinks", "drinks"
+  add_foreign_key "post_drinks", "posts"
   add_foreign_key "posts", "drinks"
   add_foreign_key "posts", "users"
 end

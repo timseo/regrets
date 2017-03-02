@@ -1,5 +1,5 @@
 class Drink < ApplicationRecord
-    has_many :post
+    has_many :posts
     has_attached_file :drink_logo,
             styles: { medium: "300x300#", thumb: "100x100#"},
             storage: :s3,
