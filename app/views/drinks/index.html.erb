@@ -13,11 +13,11 @@
 
   <tbody>
     <a href="drinks/new" class="btn btn-primary">New Drink</a>
-    
+
     <% @drinks.each do |drink| %>
       <tr>
         <td><%= drink.name %></td>
-        <td><%= image_tag drink.drink_logo.url(:thumb), height: "40px" %></td>
+        <td><%= image_tag drink.drink_logo.url(:thumb), height: "100px" %></td>
         <td><%= link_to 'Show', drink %></td>
         <td><%= link_to 'Edit', edit_drink_path(drink) %></td>
         <td><%= link_to 'Destroy', drink, method: :delete, data: { confirm: 'Are you sure?' } %></td>

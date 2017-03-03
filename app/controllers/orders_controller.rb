@@ -15,7 +15,7 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.new(order_params)
-    # @order.post_id = 9
+  
 
     respond_to do |format|
       if @order.save

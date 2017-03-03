@@ -19,7 +19,6 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
-    @order = Order.new
   end
 
   # POST /posts
@@ -28,8 +27,6 @@ class PostsController < ApplicationController
 
     @post = current_user.posts.new(post_params)
     # @post.drink_id = @drink
-
-
 
     respond_to do |format|
       if @post.save
