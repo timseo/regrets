@@ -13,12 +13,13 @@ Ever wonder how much you had to drink last night?  **reGrets**, is here to help 
 * Ruby on Rails
 * HTML
 * Bootstrap
-* p5
+* Bootswatch
+* Paperclip
 
 ## Approach Taken
 Started by sketching out wireframes.  ERD to visualize data flow and table management. 
 ## Install 411
-Click here [github ](https://github.com/timseo/regrets "App Link") and clone my git repo.  Once cloned, open project via text editor in command line and initialize rails server.  Open browser and point to server address given in terminal.  Enjoy!
+Click here [github ](https://github.com/timseo/regrets "App Link") and clone my git repo.  Once cloned, open project via text editor in command line and initialize rails server.  Also from command line please rake db:create and then rake db:migrate to initialize database locally. Open browser and point to server address given in terminal.  Enjoy!
 
 ## Stretch Goals
 * Speech recognition
@@ -27,7 +28,9 @@ Click here [github ](https://github.com/timseo/regrets "App Link") and clone my 
 * Filter post board by popularity 
 
 ## Unsolved
-Stay tuned
+* Could not connect drinks and posts tables 
+* Should have nested them from the start
+
 
 ## Links
 ###[REGRETS - github](https://github.com/timseo/regrets "App Link")
@@ -70,3 +73,7 @@ Tracker
 ## ERD
 
 ![erd 1](https://github.com/timseo/GA_project2/blob/master/wireframe/DA%20BA%20%20ERD%20-%20Standard.jpeg?raw=true)
+
+## New ERD
+
+![erd 2](https://github.com/timseo/regrets/blob/master/image/Photo%20Mar%2002,%208%2056%2053%20PM.jpg?raw=true)
