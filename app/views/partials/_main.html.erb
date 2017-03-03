@@ -5,7 +5,7 @@
     <a>
       <% if current_user %>
         <!-- current_user will return true if a user is logged in -->
-        <%= "Hello #{current_user.name}" %>
+        <%= "Hello #{current_user.name.capitalize!}" %>
       <br>
         <a href= "/posts" class="btn btn-primary btn-lg" >Recent Regrets</a>
 

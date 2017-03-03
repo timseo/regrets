@@ -42,6 +42,16 @@ Rails.application.routes.draw do
     patch 'posts/:id' => 'posts#update'
     delete 'posts/:id' => 'posts#destroy'
 
+
+    get 'orders/' => 'orders#index'
+    post 'orders' => 'orders#create'
+    get 'orders/new' => 'orders#new', as: :new_order
+    get 'orders/:id' => 'orders#show', as: :order
+    get 'orders/:id/edit' => 'orders#edit', as: :edit_order
+    patch 'orders/:id' => 'orders#update'
+    delete 'orders/:id' => 'orders#destroy'
+
+
     get 'comments/' => 'comments#index'
     post 'comments/' => 'comments#create'
     get 'comments/new' => 'comments#new', as: :new_comment
