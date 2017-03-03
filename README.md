@@ -32,6 +32,7 @@ Stay tuned
 ## Links
 ###[REGRETS - github](https://github.com/timseo/regrets "App Link")
 ###[Trello](https://trello.com/b/PWvBrNRF "trello")
+###[Heroku](https://regrets.herokuapp.com/ "heroku")
 
 ![moski logo](https://github.com/timseo/GA_project1/blob/master/images/moski-greyscale-logo.png?raw=true=10x10)
 
