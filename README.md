@@ -76,4 +76,4 @@ Tracker
 
 ## New ERD
 
-![erd 2](https://github.com/timseo/regrets/blob/master/image/Photo%20Mar%2002,%208%2056%2053%20PM.jpg?raw=true)
+![erd 2](https://github.com/timseo/regrets/blob/master/image/Photo%20Mar%2006,%2010%2041%2029%20AM.jpg?raw=true)
